@@ -45,7 +45,7 @@ class AvatarController extends Controller
         } catch (Exception $e) {
         }
 
-        return redirect()->back()->with('status', 'Avatar updated successfully. It may take a few minutes to update across the site.');
+        return redirect()->back()->with('status', 'Аватар успешно обновлен. Обновление по всему сайту может занять несколько минут.');
     }
 
     public function getPath($user, $file)

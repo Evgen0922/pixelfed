@@ -77,7 +77,7 @@
 					<textarea class="form-control" rows="4" name="bio" placeholder="Empty bio">{{$profile->bio}}</textarea>
 				</div>
 				<div class="form-group">
-					<label class="font-weight-bold text-muted">Website</label>
+					<label class="font-weight-bold text-muted">Вебсайт</label>
 					<input type="text" class="form-control" name="website" value="{{$user->website}}" placeholder="No website added">
 				</div>
 				<div class="form-group">

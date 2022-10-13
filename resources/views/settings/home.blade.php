@@ -3,7 +3,7 @@
 @section('section')
 
 	<div class="title">
-		<h3 class="font-weight-bold">Account Settings</h3>
+		<h3 class="font-weight-bold">Настройки аккаунта</h3>
 	</div>
 	<hr>
 	<div class="form-group row">
@@ -13,7 +13,7 @@
 		<div class="col-sm-9">
 			<p class="lead font-weight-bold mb-0">{{Auth::user()->username}}</p>
 			<p class="">
-				<a href="#" class="font-weight-bold change-profile-photo" data-toggle="collapse" data-target="#avatarCollapse" aria-expanded="false" aria-controls="avatarCollapse">Change Profile Photo</a>
+				<a href="#" class="font-weight-bold change-profile-photo" data-toggle="collapse" data-target="#avatarCollapse" aria-expanded="false" aria-controls="avatarCollapse">Сменить фото профиля</a>
 			</p>
 			<div class="collapse" id="avatarCollapse">
 				<form method="post" action="/settings/avatar" enctype="multipart/form-data">
@@ -21,35 +21,35 @@
 				<div class="card card-body">
 					<div class="custom-file mb-1">
 						<input type="file" name="avatar" class="custom-file-input" id="avatarInput">
-						<label class="custom-file-label" for="avatarInput">Select a profile photo</label>
+						<label class="custom-file-label" for="avatarInput">Выберите фото</label>
 					</div>
-					<p><span class="small font-weight-bold">Must be a jpeg or png. Max avatar size: <span id="maxAvatarSize"></span></span></p>
+					<p><span class="small font-weight-bold">Загрузка в формате jpeg или png. До: <span id="maxAvatarSize"></span></span></p>
 					<div id="previewAvatar"></div>
-					<p class="mb-0"><button type="submit" class="btn btn-primary px-4 py-0 font-weight-bold">Upload</button></p>
+					<p class="mb-0"><button type="submit" class="btn btn-primary px-4 py-0 font-weight-bold">Загрузить</button></p>
 				</div>
 				</form>
 			</div>
 			<p class="">
-				<a class="font-weight-bold text-muted delete-profile-photo" href="#">Delete Profile Photo</a>
+				<a class="font-weight-bold text-muted delete-profile-photo" href="#">Удалить фото профиля</a>
 			</p>
 		</div>
 	</div>
 	<form method="post">
 		@csrf
 		<div class="form-group row">
-			<label for="name" class="col-sm-3 col-form-label font-weight-bold">Name</label>
+			<label for="name" class="col-sm-3 col-form-label font-weight-bold">Имя</label>
 			<div class="col-sm-9">
 				<input type="text" class="form-control" id="name" name="name" placeholder="Your Name" value="{{Auth::user()->profile->name}}" v-pre>
 			</div>
 		</div>
 		<div class="form-group row">
-			<label for="website" class="col-sm-3 col-form-label font-weight-bold">Website</label>
+			<label for="website" class="col-sm-3 col-form-label font-weight-bold">Вебсайт</label>
 			<div class="col-sm-9">
 				<input type="text" class="form-control" id="website" name="website" placeholder="Website" value="{{Auth::user()->profile->website}}" v-pre>
 			</div>
 		</div>
 		<div class="form-group row">
-			<label for="bio" class="col-sm-3 col-form-label font-weight-bold">Bio</label>
+			<label for="bio" class="col-sm-3 col-form-label font-weight-bold">Биография</label>
 			<div class="col-sm-9">
 				<textarea class="form-control" id="bio" name="bio" placeholder="Add a bio here" rows="2" data-max-length="{{config('pixelfed.max_bio_length')}}" v-pre>{{strip_tags(Auth::user()->profile->bio)}}</textarea>
 				<p class="form-text">
@@ -57,8 +57,9 @@
 				</p>
 			</div>
 		</div>
-		<div class="form-group row">
-			<label for="language" class="col-sm-3 col-form-label font-weight-bold">Language</label>
+		<!-- TODO: Убраны другие языки -->
+		<!-- <div class="form-group row">
+			<label for="language" class="col-sm-3 col-form-label font-weight-bold">Язык</label>
 			<div class="col-sm-9">
 				<select class="form-control" name="language">
 				@foreach(App\Util\Localization\Localization::languages() as $lang)
@@ -66,7 +67,7 @@
 				@endforeach
 				</select>
 			</div>
-		</div>
+		</div> -->
 		<div class="form-group row">
 			<label for="pronouns" class="col-sm-3 col-form-label font-weight-bold">Pronouns</label>
 			<div class="col-sm-9">
@@ -81,17 +82,17 @@
 		</div>
 		@if(config_cache('pixelfed.enforce_account_limit'))
 		<div class="pt-3">
-			<p class="font-weight-bold text-muted text-center">Storage Usage</p>
+			<p class="font-weight-bold text-muted text-center">Использование диска</p>
 		</div>
 		<div class="form-group row">
-			<label class="col-sm-3 col-form-label font-weight-bold">Storage Used</label>
+			<label class="col-sm-3 col-form-label font-weight-bold">Диск</label>
 			<div class="col-sm-9">
 				<div class="progress mt-2">
 					<div class="progress-bar" role="progressbar" style="width: {{$storage['percentUsed']}}%"  aria-valuenow="{{$storage['percentUsed']}}" aria-valuemin="0" aria-valuemax="100"></div>
 				</div>
 				<div class="help-text">
 					<span class="small text-muted">
-						{{$storage['percentUsed']}}% used
+						{{$storage['percentUsed']}}% использовано
 					</span>
 					<span class="small text-muted float-right">
 						{{$storage['usedPretty']}} / {{$storage['limitPretty']}}
@@ -103,7 +104,7 @@
 		<hr>
 		<div class="form-group row">
 			<div class="col-12 text-right">
-				<button type="submit" class="btn btn-primary font-weight-bold py-0 px-5">Submit</button>
+				<button type="submit" class="btn btn-primary font-weight-bold py-0 px-5">Обновить</button>
 			</div>
 		</div>
 	</form>

@@ -4,7 +4,7 @@
 			<div class="row">
 				<div v-if="morePostsAvailable == true" class="col-12 mt-5 pt-3 mb-3 fixed-top">
 					<p class="text-center">
-						<button class="btn btn-dark px-4 rounded-pill font-weight-bold shadow" @click="syncNewPosts">Load New Posts</button>
+						<button class="btn btn-dark px-4 rounded-pill font-weight-bold shadow" @click="syncNewPosts">Загрузить новые посты</button>
 					</p>
 				</div>
 
@@ -15,7 +15,7 @@
 					<div class="pt-4">
 						<div v-if="loading" class="text-center" style="padding-top:10px;">
 							<div class="spinner-border" role="status">
-								<span class="sr-only">Loading...</span>
+								<span class="sr-only">Загрузка...</span>
 							</div>
 						</div>
 
@@ -161,7 +161,7 @@
 											<div v-else>
 												<p class="text-center h3 font-weight-light">You've reached the end of this feed</p>
 												<p class="text-center mb-0">
-													<a class="btn btn-link font-weight-bold px-4" href="/discover">Discover new posts and people</a>
+													<a class="btn btn-link font-weight-bold px-4" href="/discover">Открывайте новые посты и людей</a>
 												</p>
 											</div>
 										</div>
@@ -188,7 +188,7 @@
 									<p class="text-center h3 font-weight-light">Hello {{profile.username}}</p>
 									<p class="text-center text-muted font-weight-light">Accounts you follow will appear in this feed.</p>
 									<p class="text-center mb-0">
-										<a class="btn btn-link font-weight-bold px-4" href="/discover">Discover new posts and people</a>
+										<a class="btn btn-link font-weight-bold px-4" href="/discover">Открывайте новые посты и людей</a>
 									</p>
 									<hr>
 									<div class="text-center pt-5">
@@ -226,9 +226,9 @@
 								<div class="card-body py-5 my-5">
 									<p class="text-center"><i class="fas fa-battery-empty fa-8x text-lighter"></i></p>
 									<p class="text-center h3 font-weight-light">empty_timeline.jpg</p>
-									<p class="text-center text-muted font-weight-light">We cannot find any posts for this timeline.</p>
+									<p class="text-center text-muted font-weight-light">Мы не можем найти никаких сообщений для этого времени.</p>
 									<p class="text-center mb-0">
-										<a class="btn btn-link font-weight-bold px-4" href="/discover">Discover new posts and people</a>
+										<a class="btn btn-link font-weight-bold px-4" href="/discover">Открывайте новые посты и людей</a>
 									</p>
 								</div>
 							</div>
@@ -259,7 +259,7 @@
 											<div class="ml-2">
 												<a class="text-muted" href="/settings/home">
 													<i class="fas fa-cog fa-lg"></i>
-													<span class="sr-only">User Settings</span>
+													<span class="sr-only">Настройки</span>
 												</a>
 											</div>
 										</div>
@@ -286,15 +286,15 @@
                                 <div class="d-flex justify-content-between text-center">
                                     <span class="cursor-pointer" @click="redirect(profile.url)">
                                         <p class="mb-0 font-weight-bold">{{formatCount(profile.statuses_count)}}</p>
-                                        <p class="mb-0 small text-muted">Posts</p>
+                                        <p class="mb-0 small text-muted">Посты</p>
                                     </span>
                                     <span class="cursor-pointer" @click="redirect(profile.url+'?md=followers')">
                                         <p class="mb-0 font-weight-bold">{{formatCount(profile.followers_count)}}</p>
-                                        <p class="mb-0 small text-muted">Followers</p>
+                                        <p class="mb-0 small text-muted">Подписчики</p>
                                     </span>
                                     <span class="cursor-pointer" @click="redirect(profile.url+'?md=following')">
                                         <p class="mb-0 font-weight-bold">{{formatCount(profile.following_count)}}</p>
-                                        <p class="mb-0 small text-muted">Following</p>
+                                        <p class="mb-0 small text-muted">Подписки</p>
                                     </span>
                                 </div>
                             </div>
@@ -333,15 +333,15 @@
 						<footer>
 							<div class="container px-0 pb-5">
 								<p class="mb-2 small text-justify">
-									<a href="/site/about" class="text-lighter pr-2">About</a>
-									<a href="/site/help" class="text-lighter pr-2">Help</a>
-									<a href="/site/language" class="text-lighter pr-2">Language</a>
+									<a href="/site/about" class="text-lighter pr-2">О</a>
+									<a href="/site/help" class="text-lighter pr-2">Помощь</a>
+									<!-- <a href="/site/language" class="text-lighter pr-2">Language</a> -->
 									<a href="/discover/places" class="text-lighter pr-2">Places</a>
 									<a href="/site/privacy" class="text-lighter pr-2">Privacy</a>
-									<a href="/site/terms" class="text-lighter pr-2">Terms</a>
+									<a href="/site/terms" class="text-lighter pr-2">Условия</a>
 								</p>
 								<p class="mb-0 text-uppercase text-muted small">
-									<a href="https://pixelfed.org" class="text-lighter" rel="noopener" title="" data-toggle="tooltip">Powered by Pixelfed</a>
+									<a href="https://spechka.ru" class="text-lighter" rel="noopener" title="" data-toggle="tooltip">Работает на Speechka</a>
 								</p>
 							</div>
 						</footer>

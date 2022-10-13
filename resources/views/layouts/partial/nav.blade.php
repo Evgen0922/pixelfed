@@ -35,31 +35,31 @@
 						<li class="nav-item px-md-2 d-none d-md-block">
 							<a class="nav-link font-weight-bold text-dark" href="/" title="Home" data-toggle="tooltip" data-placement="bottom">
 								<i class="fal fa-home fa-lg" style="font-size: 22px;"></i>
-								<span class="sr-only">Home</span>
+								<span class="sr-only">Домашняя</span>
 							</a>
 						</li>
 						<li class="nav-item px-md-2">
 							<a class="nav-link font-weight-bold text-dark" href="/account/direct" title="Direct" data-toggle="tooltip" data-placement="bottom">
 								<i class="fal fa-location-circle fa-lg" style="font-size: 22px;"></i>
-								<span class="sr-only">Direct</span>
+								<span class="sr-only">Сообщения</span>
 							</a>
 						</li>
 						<li class="nav-item px-md-2 d-none d-md-block">
 							<a class="nav-link font-weight-bold text-dark" href="/account/activity" title="Notifications" data-toggle="tooltip" data-placement="bottom">
 								<i class="fal fa-bell fa-lg" style="font-size: 22px;"></i>
-								<span class="sr-only">Notifications</span>
+								<span class="sr-only">Уведомления</span>
 							</a>
 						</li>
 						<li class="nav-item px-md-2 d-none d-md-block">
 							<div class="nav-link btn btn-primary lead btn-sm px-3 py-1 text-white shadow rounded-pill d-flex align-items-center" title="Compose" data-toggle="tooltip" data-placement="bottom" onclick="App.util.compose.post()">
 								<i class="fal fa-plus-circle" style="font-size:14px;margin-right:6px;"></i>
-								New
+								Новый
 							</div>
 						</li>
 						<li class="nav-item dropdown ml-2">
 							<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="User Menu" data-toggle="tooltip" data-placement="bottom">
 								<i class="far fa-user fa-lg text-dark"></i>
-								<span class="sr-only">User Menu</span>
+								<span class="sr-only">Меню</span>
 								<img class="d-none" src="/storage/avatars/default.png?v=0" class="rounded-circle border shadow" width="38" height="38" onerror="this.onerror=null;this.src='/storage/avatars/default.png?v=0';">
 							</a>
 

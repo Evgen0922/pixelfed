@@ -150,10 +150,10 @@
     "timeline": {
         "peopleYouMayKnow": "People you may know",
         "onboarding": {
-            "welcome": "Welcome",
-            "thisIsYourHomeFeed": "This is your home feed, a chronological feed of posts from accounts you follow.",
-            "letUsHelpYouFind": "Let us help you find some interesting people to follow",
-            "refreshFeed": "Refresh my feed"
+            "welcome": "Приветствуем!",
+            "thisIsYourHomeFeed": "Это Ваша домашняя лента, и лента сообщений из аккаунтов, на которые вы подписаны.",
+            "letUsHelpYouFind": "Давайте поможем Вам найти интересных людей, на которых можно подписаться",
+            "refreshFeed": "Обновить мою ленту"
         }
     },
     "hashtags": {

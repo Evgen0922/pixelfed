@@ -289,17 +289,17 @@
 							</div> -->
 						</div>
 						<div class="card-footer">
-							<a class="btn btn-primary btn-block font-weight-bold rounded-0" :href="status.url">View Post</a>
+							<a class="btn btn-primary btn-block font-weight-bold rounded-0" :href="status.url">Посмотреть пост</a>
 						</div>
 					</div>
 				</div>
 				<div v-else>
-					<div class="border py-3 text-center font-weight-bold">No results found</div>
+					<div class="border py-3 text-center font-weight-bold">Результаты не найдены</div>
 				</div>
 			</div>
 		</div>
 		<div v-else class="col-12">
-			<p class="text-center text-muted lead font-weight-bold">No results found</p>
+			<p class="text-center text-muted lead font-weight-bold">Результаты не найдены</p>
 		</div>
 	</div>
 

@@ -2,24 +2,24 @@
 
 	@section('section')
 	<div class="title">
-		<h3 class="font-weight-bold">Labs</h3>
-		<p class="lead">Experimental features</p>
+		<h3 class="font-weight-bold">Бета</h3>
+		<p class="lead">Экспериментальные функции</p>
 	</div>
 	<hr>
 	<form method="post" id="form">
 		@csrf
 		<div class="form-check pb-3">
-			<input class="form-check-input" type="checkbox" name="dark_mode" id="dark_mode" {{request()->hasCookie('dark-mode') ? 'checked':''}}>
+			<input class="form-check-input" type="checkbox" name="dark_mode" id="dark_mode" {{request()->hasCookie('тёмная тема') ? 'checked':''}}>
 			<label class="form-check-label font-weight-bold" for="dark_mode">
 				{{__('Dark Mode')}}
 			</label>
-			<p class="text-muted small help-text">Use dark mode theme.</p>
+			<p class="text-muted small help-text">Использовать тёмную тему.</p>
 		</div>
 
 		<div class="form-group row">
 			<div class="col-12">
 				<hr>
-				<button type="button" class="btn btn-primary font-weight-bold py-1 btn-block" id="save-btn">Save Changes</button>
+				<button type="button" class="btn btn-primary font-weight-bold py-1 btn-block" id="save-btn">Сохранить изменения</button>
 			</div>
 		</div>
 	</form>

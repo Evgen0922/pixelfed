@@ -66,7 +66,7 @@
 						<div class="card my-4 shadow-none border">
 							<div class="card-body px-lg-5">
 								<div class="text-center">
-									<p class="small text-uppercase font-weight-bold text-muted">Account Login</p>
+									<p class="small text-uppercase font-weight-bold text-muted">Войти</p>
 								</div>
 								<div>
 									<form class="px-1" method="POST" action="{{ route('login') }}" id="login_form">
@@ -78,7 +78,7 @@
 
 												@if ($errors->has('email'))
 													<span class="invalid-feedback">
-														<strong>{{ $errors->first('email') }}</strong>
+														<strong>{{ $errors->first('Ваша почта') }}</strong>
 													</span>
 												@endif
 											</div>
@@ -91,7 +91,7 @@
 
 												@if ($errors->has('password'))
 													<span class="invalid-feedback">
-														<strong>{{ $errors->first('password') }}</strong>
+														<strong>{{ $errors->first('пароль') }}</strong>
 													</span>
 												@endif
 											</div>
@@ -103,7 +103,7 @@
 													<label>
 														<input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
 														<span class="font-weight-bold small ml-1 text-muted">
-															{{ __('Remember Me') }}
+															{{ __('Запомнить меня!') }}
 														</span>
 													</label>
 												</div>
@@ -117,7 +117,7 @@
 										<div class="form-group row mb-0">
 											<div class="col-md-12">
 												<button type="submit" class="btn btn-primary btn-block btn-lg font-weight-bold text-uppercase">
-													{{ __('Login') }}
+													{{ __('Войти') }}
 												</button>
 
 											</div>
@@ -129,10 +129,10 @@
 						<div class="card shadow-none border card-body">
 							<p class="text-center mb-0 font-weight-bold">
 								@if(config_cache('pixelfed.open_registration'))
-								<a href="/register">Register</a>
+								<a href="/register">Регистрация</a>
 								<span class="px-1">·</span>
 								@endif
-								<a href="/password/reset">Password Reset</a>
+								<a href="/password/reset">Сброс пароля</a>
 							</p>
 						</div>
 					</div>

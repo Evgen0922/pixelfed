@@ -145,7 +145,7 @@
 										</span>
 										<span v-if="relationship && relationship.followed_by" class="btn btn-outline-muted btn-sm py-0 mr-3">Follows You</span>
 										<span>
-											Joined {{joinedAtFormat(profile.created_at)}}
+											Зарегистрирован {{joinedAtFormat(profile.created_at)}}
 										</span>
 									</p>
 								</div>
@@ -156,7 +156,7 @@
 			</div>
 			<div class="d-block d-md-none my-0 pt-3 border-bottom">
 				<p v-if="user && user.hasOwnProperty('id')" class="pt-3">
-					<button v-if="owner" class="btn btn-outline-secondary bg-white btn-sm py-1 btn-block text-center font-weight-bold text-dark border border-lighter" @click.prevent="redirect('/settings/home')">Edit Profile</button>
+					<button v-if="owner" class="btn btn-outline-secondary bg-white btn-sm py-1 btn-block text-center font-weight-bold text-dark border border-lighter" @click.prevent="redirect('/settings/home')">Изменить профиль</button>
 					<button v-if="!owner && relationship.following" class="btn btn-outline-secondary bg-white btn-sm py-1 px-5 font-weight-bold text-dark border border-lighter" @click="followProfile">&nbsp;&nbsp; Unfollow &nbsp;&nbsp;</button>
 					<button v-if="!owner && !relationship.following" class="btn btn-primary btn-sm py-1 px-5 font-weight-bold" @click="followProfile">{{relationship.followed_by ? 'Follow Back' : '&nbsp;&nbsp;&nbsp;&nbsp; Follow &nbsp;&nbsp;&nbsp;&nbsp;'}}</button>
 					<!-- <button v-if="!owner" class="btn btn-outline-secondary bg-white btn-sm py-1 px-5 font-weight-bold text-dark border border-lighter mx-2">Message</button>
@@ -166,16 +166,16 @@
 			<div class="">
 				<ul class="nav nav-topbar d-flex justify-content-center border-0">
 					<li class="nav-item border-top">
-						<a :class="this.mode == 'grid' ? 'nav-link text-dark' : 'nav-link'" href="#" v-on:click.prevent="switchMode('grid')"><i class="fas fa-th"></i> <span class="d-none d-md-inline-block small pl-1">POSTS</span></a>
+						<a :class="this.mode == 'grid' ? 'nav-link text-dark' : 'nav-link'" href="#" v-on:click.prevent="switchMode('grid')"><i class="fas fa-th"></i> <span class="d-none d-md-inline-block small pl-1">ПОСТЫ</span></a>
 					</li>
 					<li class="nav-item px-0 border-top">
-						<a :class="this.mode == 'collections' ? 'nav-link text-dark' : 'nav-link'" href="#" v-on:click.prevent="switchMode('collections')"><i class="fas fa-images"></i> <span class="d-none d-md-inline-block small pl-1">COLLECTIONS</span></a>
+						<a :class="this.mode == 'collections' ? 'nav-link text-dark' : 'nav-link'" href="#" v-on:click.prevent="switchMode('collections')"><i class="fas fa-images"></i> <span class="d-none d-md-inline-block small pl-1">КОЛЛЕКЦИИ</span></a>
 					</li>
 					<li v-if="owner" class="nav-item border-top">
-						<a :class="this.mode == 'bookmarks' ? 'nav-link text-dark' : 'nav-link'" href="#" v-on:click.prevent="switchMode('bookmarks')"><i class="fas fa-bookmark"></i> <span class="d-none d-md-inline-block small pl-1">SAVED</span></a>
+						<a :class="this.mode == 'bookmarks' ? 'nav-link text-dark' : 'nav-link'" href="#" v-on:click.prevent="switchMode('bookmarks')"><i class="fas fa-bookmark"></i> <span class="d-none d-md-inline-block small pl-1">СОХРАНЕНО</span></a>
 					</li>
 					<li v-if="owner" class="nav-item border-top">
-						<a :class="this.mode == 'archives' ? 'nav-link text-dark' : 'nav-link'" href="#" v-on:click.prevent="switchMode('archives')"><i class="far fa-folder-open"></i> <span class="d-none d-md-inline-block small pl-1">ARCHIVES</span></a>
+						<a :class="this.mode == 'archives' ? 'nav-link text-dark' : 'nav-link'" href="#" v-on:click.prevent="switchMode('archives')"><i class="far fa-folder-open"></i> <span class="d-none d-md-inline-block small pl-1">АРХИВЫ</span></a>
 					</li>
 				</ul>
 			</div>
@@ -226,7 +226,7 @@
 							<div v-if="timeline.length == 0" class="col-12">
 								<div class="py-5 text-center text-muted">
 									<p><i class="fas fa-camera-retro fa-2x"></i></p>
-									<p class="h2 font-weight-light pt-3">No posts yet</p>
+									<p class="h2 font-weight-light pt-3">Пока нет постов</p>
 								</div>
 							</div>
 						</div>
@@ -292,7 +292,7 @@
 						<div v-else>
 							<div class="py-5 text-center text-muted">
 								<p><i class="fas fa-images fa-2x"></i></p>
-								<p class="h2 font-weight-light pt-3">No collections yet</p>
+								<p class="h2 font-weight-light pt-3">Пока нет коллекций</p>
 							</div>
 						</div>
 					</div>

@@ -6,7 +6,7 @@
         <div class="col-lg-5">
             <div class="text-center">
                 <img src="/img/pixelfed-icon-color.svg" height="60px">
-                <p class="font-weight-light h3 py-4">Confirm password to continue</p>
+                <p class="font-weight-light h3 py-4">Введите Ваш пароль для продолжения</p>
             </div>
             <div class="card">
                 <div class="card-body">
@@ -18,7 +18,7 @@
 
                             @if ($errors->has('password'))
                                 <span class="invalid-feedback">
-                                    <strong>{{ $errors->first('password') }}</strong>
+                                    <strong>{{ $errors->first('пароль') }}</strong>
                                 </span>
                             @endif
                         </div>
@@ -26,14 +26,14 @@
                         <div class="form-group">
                             <div class="custom-control custom-checkbox">
                               <input type="checkbox" class="custom-control-input" id="trusted-device" name="trustDevice">
-                              <label class="custom-control-label text-muted" for="trusted-device">Trust this device and don't ask again</label>
+                              <label class="custom-control-label text-muted" for="trusted-device">Запомнить на этом устройстве</label>
                             </div>
                         </div>  
 
                         <div class="form-group row mb-0">
                             <div class="col-md-12">
                                 <button type="submit" class="btn btn-success btn-block  font-weight-bold">
-                                    {{ __('Confirm Password') }}
+                                    {{ __('Подтвердить') }}
                                 </button>
 
                             </div>

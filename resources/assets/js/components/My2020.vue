@@ -42,13 +42,13 @@
 			<div v-if="stats.account.most_popular">
 				<p class="h1 font-weight-light mb-0 text-break md-line-height">Your most popular post of 2020 was created on <span class="font-weight-bold">{{stats.account.most_popular.created_at}}</span> with <span class="font-weight-bold">{{stats.account.most_popular.likes_count}}</span> likes.</p>
 				<p class="mt-4 mb-0">
-					<a class="btn btn-outline-light btn-lg btn-block rounded-pill" :href="stats.account.most_popular.url">View Post</a>
+					<a class="btn btn-outline-light btn-lg btn-block rounded-pill" :href="stats.account.most_popular.url">Посмотреть пост</a>
 				</p>
 			</div>
 			<div v-else>
 				<p class="h1 font-weight-light mb-0 text-break md-line-height">The most popular post of 2020 was created by <span class="font-weight-bold">{{stats.popular.post.username}}</span> on <span class="font-weight-bold">{{stats.popular.post.created_at}}</span> with <span class="font-weight-bold">{{stats.popular.post.likes_count}}</span> likes.</p>
 				<p class="mt-4 mb-0">
-					<a class="btn btn-outline-light btn-lg btn-block rounded-pill" :href="stats.popular.post.url">View Post</a>
+					<a class="btn btn-outline-light btn-lg btn-block rounded-pill" :href="stats.popular.post.url">Посмотреть пост</a>
 				</p>
 			</div>
 		</div>

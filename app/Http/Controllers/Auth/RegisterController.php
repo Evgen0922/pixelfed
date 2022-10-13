@@ -121,7 +121,7 @@ class RegisterController extends Controller
 			'required',
 			function ($attribute, $value, $fail) {
 				if($value !== $this->getRegisterToken()) {
-					return $fail('Something went wrong');
+					return $fail('Что-то пошло не так');
 				}
 			}
 		];

@@ -11,16 +11,16 @@
 			<div class="list-group text-center">
 				<!-- <div v-if="status && status.account.id != profile.id && ctxMenuRelationship && ctxMenuRelationship.following" class="list-group-item rounded cursor-pointer font-weight-bold text-danger" @click="ctxMenuUnfollow()">Unfollow</div>
 				<div v-if="status && status.account.id != profile.id && ctxMenuRelationship && !ctxMenuRelationship.following" class="list-group-item rounded cursor-pointer font-weight-bold text-primary" @click="ctxMenuFollow()">Follow</div> -->
-				<div v-if="status.visibility !== 'archived'" class="list-group-item rounded cursor-pointer" @click="ctxMenuGoToPost()">View Post</div>
-				<div v-if="status.visibility !== 'archived'" class="list-group-item rounded cursor-pointer" @click="ctxMenuGoToProfile()">View Profile</div>
+				<div v-if="status.visibility !== 'archived'" class="list-group-item rounded cursor-pointer" @click="ctxMenuGoToPost()">Посмотреть Посмотреть</div>
+				<div v-if="status.visibility !== 'archived'" class="list-group-item rounded cursor-pointer" @click="ctxMenuGoToProfile()">Посмотреть профиль</div>
 				<!-- <div v-if="status && status.local == true && !status.in_reply_to_id" class="list-group-item rounded cursor-pointer" @click="ctxMenuEmbed()">Embed</div>
 				<div class="list-group-item rounded cursor-pointer" @click="ctxMenuCopyLink()">Copy Link</div> -->
-				<div v-if="status.visibility !== 'archived'" class="list-group-item rounded cursor-pointer" @click="ctxMenuShare()">Share</div>
+				<div v-if="status.visibility !== 'archived'" class="list-group-item rounded cursor-pointer" @click="ctxMenuShare()">Поделиться</div>
 				<div v-if="status && profile && profile.is_admin == true && status.visibility !== 'archived'" class="list-group-item rounded cursor-pointer" @click="ctxModMenuShow()">Moderation Tools</div>
-				<div v-if="status && status.account.id != profile.id" class="list-group-item rounded cursor-pointer text-danger" @click="ctxMenuReportPost()">Report</div>
-				<div v-if="status && profile.id == status.account.id && status.visibility !== 'archived'" class="list-group-item rounded cursor-pointer text-danger" @click="archivePost(status)">Archive</div>
-				<div v-if="status && profile.id == status.account.id && status.visibility == 'archived'" class="list-group-item rounded cursor-pointer text-danger" @click="unarchivePost(status)">Unarchive</div>
-				<div v-if="status && (profile.is_admin || profile.id == status.account.id) && status.visibility !== 'archived'" class="list-group-item rounded cursor-pointer text-danger" @click="deletePost(status)">Delete</div>
+				<div v-if="status && status.account.id != profile.id" class="list-group-item rounded cursor-pointer text-danger" @click="ctxMenuReportPost()">Сообщить</div>
+				<div v-if="status && profile.id == status.account.id && status.visibility !== 'archived'" class="list-group-item rounded cursor-pointer text-danger" @click="archivePost(status)">В архив</div>
+				<div v-if="status && profile.id == status.account.id && status.visibility == 'archived'" class="list-group-item rounded cursor-pointer text-danger" @click="unarchivePost(status)">Разархивировать</div>
+				<div v-if="status && (profile.is_admin || profile.id == status.account.id) && status.visibility !== 'archived'" class="list-group-item rounded cursor-pointer text-danger" @click="deletePost(status)">Удалить</div>
 				<div class="list-group-item rounded cursor-pointer text-lighter" @click="closeCtxMenu()">Cancel</div>
 			</div>
 		</b-modal>
@@ -45,7 +45,7 @@
 					<span class="small">Unlist + CW existing and future posts</span>
 				</div>
 				<!-- <div class="list-group-item rounded cursor-pointer" @click="ctxModOtherMenuShow()">Other</div> -->
-				<div class="list-group-item rounded cursor-pointer text-lighter" @click="ctxModMenuClose()">Cancel</div>
+				<div class="list-group-item rounded cursor-pointer text-lighter" @click="ctxModMenuClose()">Отмена</div>
 			</div>
 		</b-modal>
 		<b-modal ref="ctxModOtherModal"
@@ -63,7 +63,7 @@
 				</p>
 				<div class="list-group-item rounded cursor-pointer font-weight-bold" @click="confirmModal()">Unlist Posts</div>
 				<div class="list-group-item rounded cursor-pointer font-weight-bold" @click="confirmModal()">Moderation Log</div>
-				<div class="list-group-item rounded cursor-pointer text-lighter" @click="ctxModOtherMenuClose()">Cancel</div>
+				<div class="list-group-item rounded cursor-pointer text-lighter" @click="ctxModOtherMenuClose()">Отмена</div>
 			</div>
 		</b-modal>
 		<b-modal ref="ctxShareModal"
@@ -76,7 +76,7 @@
 			size="sm"
 			body-class="list-group-flush p-0 rounded text-center">
 			<div class="list-group-item rounded cursor-pointer" @click="shareStatus(status, $event)">{{status.reblogged ? 'Unshare' : 'Share'}} to Followers</div>
-			<div class="list-group-item rounded cursor-pointer" @click="ctxMenuCopyLink()">Copy Link</div>
+			<div class="list-group-item rounded cursor-pointer" @click="ctxMenuCopyLink()">Скопировать ссылку</div>
 			<div v-if="status && status.local == true && !status.in_reply_to_id" class="list-group-item rounded cursor-pointer" @click="ctxMenuEmbed()">Embed</div>
 			<!-- <div class="list-group-item rounded cursor-pointer border-top-0">Email</div>
 			<div class="list-group-item rounded cursor-pointer">Facebook</div>
@@ -85,7 +85,7 @@
 			<div class="list-group-item rounded cursor-pointer">Pixelfed</div>
 			<div class="list-group-item rounded cursor-pointer">Twitter</div>
 			<div class="list-group-item rounded cursor-pointer">VK</div> -->
-			<div class="list-group-item rounded cursor-pointer text-lighter" @click="closeCtxShareMenu()">Cancel</div>
+			<div class="list-group-item rounded cursor-pointer text-lighter" @click="closeCtxShareMenu()">Отмена</div>
 		</b-modal>
 		<b-modal ref="ctxEmbedModal"
 			id="ctx-embed-modal"
@@ -137,12 +137,12 @@
 				<div class="small text-center text-muted">Select one of the following options</div>
 			</p>
 			<div class="list-group text-center">
-				<div class="list-group-item rounded cursor-pointer font-weight-bold" @click="sendReport('spam')">Spam</div>
+				<div class="list-group-item rounded cursor-pointer font-weight-bold" @click="sendReport('spam')">Спам</div>
 				<div class="list-group-item rounded cursor-pointer font-weight-bold" @click="sendReport('sensitive')">Sensitive Content</div>
 				<div class="list-group-item rounded cursor-pointer font-weight-bold" @click="sendReport('abusive')">Abusive or Harmful</div>
-				<div class="list-group-item rounded cursor-pointer font-weight-bold" @click="openCtxReportOtherMenu()">Other</div>
+				<div class="list-group-item rounded cursor-pointer font-weight-bold" @click="openCtxReportOtherMenu()">Другое</div>
 				<!-- <div class="list-group-item rounded cursor-pointer" @click="ctxReportMenuGoBack()">Go Back</div> -->
-				<div class="list-group-item rounded cursor-pointer text-lighter" @click="ctxReportMenuGoBack()">Cancel</div>
+				<div class="list-group-item rounded cursor-pointer text-lighter" @click="ctxReportMenuGoBack()">Отмена</div>
 			</div>
 		</b-modal>
 		<b-modal ref="ctxReportOther"
@@ -165,7 +165,7 @@
 				<!-- <div class="list-group-item rounded cursor-pointer font-weight-bold" @click="sendReport('terrorism')">Terrorism Related</div> -->
 				<!-- <div class="list-group-item rounded cursor-pointer font-weight-bold" @click="sendReport('other')">Other or Not listed</div> -->
 				<!-- <div class="list-group-item rounded cursor-pointer" @click="ctxReportOtherMenuGoBack()">Go Back</div> -->
-				<div class="list-group-item rounded cursor-pointer text-lighter" @click="ctxReportOtherMenuGoBack()">Cancel</div>
+				<div class="list-group-item rounded cursor-pointer text-lighter" @click="ctxReportOtherMenuGoBack()">Отмена</div>
 			</div>
 		</b-modal>
 		<b-modal ref="ctxConfirm"
@@ -180,7 +180,7 @@
 				<div>{{ this.confirmModalTitle }}</div>
 			</div>
 			<div class="d-flex border-top btn-group btn-group-block rounded-0" role="group">
-				<button type="button" class="btn btn-outline-lighter border-left-0 border-top-0 border-bottom-0 border-right py-2" style="color: rgb(0,122,255) !important;" @click.prevent="confirmModalCancel()">Cancel</button>
+				<button type="button" class="btn btn-outline-lighter border-left-0 border-top-0 border-bottom-0 border-right py-2" style="color: rgb(0,122,255) !important;" @click.prevent="confirmModalCancel()">Отмена</button>
 				<button type="button" class="btn btn-outline-lighter border-0" style="color: rgb(0,122,255) !important;" @click.prevent="confirmModalConfirm()">Confirm</button>
 			</div>
 		</b-modal>
