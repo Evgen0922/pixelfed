@@ -14,7 +14,7 @@
         <p class="text-center text-muted small mb-0">
           <span class="text-muted">© {{date('Y')}} {{config('pixelfed.domain.app')}}</span>
           <span class="mx-2">·</span>
-          <a href="https://pixelfed.org" class="text-muted font-weight-bold" rel="noopener">Powered by Pixelfed</a>
+          <a href="https://spechka.ru" class="text-muted font-weight-bold" rel="noopener">Работает на Speechka</a>
           <span class="mx-2">·</span>
           <span class="text-muted">v{{config('pixelfed.version')}}</span>
         </p>

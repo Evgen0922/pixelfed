@@ -1,17 +1,18 @@
 @component('mail::message')
 # Email Confirmation
 
-Hello **{{'@'.$verify->user->username}}**, please confirm your email address.
+Здравствуйте, **{{'@'.$verify->user->username}}**. Пожалуйста, подтвердите Вашу почту.
 
-If you did not create this account, please disregard this email.
+Если вы не создавали эту учетную запись, пожалуйста, проигнорируйте это письмо.
 
 @component('mail::button', ['url' => $verify->url()])
-Confirm Email
+Подтвердить!
 @endcomponent
 
-<p>This link expires after 24 hours.</p>
+<p>Эта ссылка действует 24 часа.</p>
 <br>
 
-Thanks,<br>
-<a href="{{ config('app.url') }}">{{ config('pixelfed.domain.app') }}</a>
+Спасибо!<br>
+<p>Команда Speechka</p>
+<!-- <a href="{{ config('app.url') }}">{{ config('pixelfed.domain.app') }}</a> -->
 @endcomponent

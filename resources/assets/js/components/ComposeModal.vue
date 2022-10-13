@@ -8,7 +8,7 @@
 			<div class="card status-card card-md-rounded-0 w-100 h-100 bg-light py-3" style="border-bottom: 1px solid #f1f1f1">
 				<div class="p-5 mt-2">
 					<b-progress :value="uploadProgress" :max="100" striped :animated="true"></b-progress>
-					<p class="text-center mb-0 font-weight-bold">Uploading ... ({{uploadProgress}}%)</p>
+					<p class="text-center mb-0 font-weight-bold">Загрузка... ({{uploadProgress}}%)</p>
 				</div>
 			</div>
 		</div>
@@ -22,7 +22,7 @@
 					<span class="font-weight-bold">
 						Camera Roll
 					</span>
-					<span class="text-primary font-weight-bold">Upload</span>
+					<span class="text-primary font-weight-bold">Загрузить</span>
 				</div>
 				<div class="h-100 card-body p-0 border-top" style="width:100%; min-height: 400px;">
 					<div v-if="cameraRollMedia.length > 0" class="row p-0 m-0">
@@ -36,7 +36,7 @@
 					</div>
 					<div v-else class="w-100 h-100 d-flex justify-content-center align-items-center">
 						<span class="w-100 h-100">
-							<button type="button" class="btn btn-primary">Upload</button>
+							<button type="button" class="btn btn-primary">Загрузить</button>
 							<button type="button" class="btn btn-primary" @click="fetchCameraRollDrafts()">Load Camera Roll</button>
 						</span>
 					</div>
@@ -55,7 +55,7 @@
 					</span>
 					<span v-if="postingPoll">
 						<div class="spinner-border spinner-border-sm" role="status">
-							<span class="sr-only">Loading...</span>
+							<span class="sr-only">Загрузка...</span>
 						</div>
 					</span>
 					<button v-else-if="!postingPoll && pollOptions.length > 1 && composeText.length" class="btn btn-primary btn-sm font-weight-bold" @click="postNewPoll">
@@ -173,7 +173,7 @@
 						<!-- <a v-if="page > 1" class="font-weight-bold text-decoration-none" href="#" @click.prevent="page--">Back</a> -->
 						<span v-if="pageLoading">
 							<div class="spinner-border spinner-border-sm" role="status">
-								<span class="sr-only">Loading...</span>
+								<span class="sr-only">Загрузка...</span>
 							</div>
 						</span>
 						<span v-else>
@@ -432,7 +432,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="border-bottom px-4 mb-0 py-2">
+						<!-- <div class="border-bottom px-4 mb-0 py-2">
 							<div class="d-flex justify-content-between">
 								<div>
 									<div class="text-dark ">Contains NSFW Media</div>
@@ -455,7 +455,7 @@
 
 								<p class="help-text small text-right text-muted mb-0">{{ spoilerTextLength }}/140</p>
 							</div>
-						</div>
+						</div> -->
 						<div class="border-bottom">
 							<p class="px-4 mb-0 py-2 cursor-pointer" @click="showTagCard()">Tag people</p>
 						</div>
@@ -470,7 +470,7 @@
 								</span>
 							</p>
 						</div>
-						<div class="border-bottom">
+						<!-- <div class="border-bottom">
 							<p class="px-4 mb-0 py-2 cursor-pointer" @click="showLicenseCard()">
 								<span>Add license</span>
 								<span class="float-right">
@@ -478,7 +478,7 @@
 									<a href="#" @click.prevent="showLicenseCard()" class="text-decoration-none"><i class="fas fa-chevron-right fa-lg text-lighter"></i></a>
 								</span>
 							</p>
-						</div>
+						</div> -->
 						<div class="border-bottom">
 							<p class="px-4 mb-0 py-2 cursor-pointer" @click="showLocationCard()" v-if="!place">Add location</p>
 							<p v-else class="px-4 mb-0 py-2">
@@ -774,9 +774,9 @@
 
 
 						<div class="border-bottom d-flex justify-content-between px-4 mb-0 py-2 ">
-							<div>
+							<!-- <div>
 								<div class="text-dark ">Contains NSFW Media</div>
-							</div>
+							</div> -->
 							<div>
 								<div class="custom-control custom-switch" style="z-index: 9999;">
 									<input type="checkbox" class="custom-control-input" id="asnsfw" v-model="nsfw">
@@ -784,9 +784,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="border-bottom">
+						<!-- <div class="border-bottom">
 							<p class="px-4 mb-0 py-2 cursor-pointer" @click="showLicenseCard()">Add license</p>
-						</div>
+						</div> -->
 						<div class="border-bottom">
 							<p class="px-4 mb-0 py-2">
 								<span>Audience</span>

@@ -82,10 +82,10 @@
 		</div>
 		@if(config_cache('pixelfed.enforce_account_limit'))
 		<div class="pt-3">
-			<p class="font-weight-bold text-muted text-center">Использование диска</p>
+			<p class="font-weight-bold text-muted text-center">Диск</p>
 		</div>
 		<div class="form-group row">
-			<label class="col-sm-3 col-form-label font-weight-bold">Диск</label>
+			<label class="col-sm-3 col-form-label font-weight-bold">Использование диска</label>
 			<div class="col-sm-9">
 				<div class="progress mt-2">
 					<div class="progress-bar" role="progressbar" style="width: {{$storage['percentUsed']}}%"  aria-valuenow="{{$storage['percentUsed']}}" aria-valuemin="0" aria-valuemax="100"></div>
@@ -104,7 +104,7 @@
 		<hr>
 		<div class="form-group row">
 			<div class="col-12 text-right">
-				<button type="submit" class="btn btn-primary font-weight-bold py-0 px-5">Обновить</button>
+				<button type="submit" class="btn btn-primary font-weight-bold py-0 px-5">Сохранить</button>
 			</div>
 		</div>
 	</form>

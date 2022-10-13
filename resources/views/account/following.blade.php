@@ -10,14 +10,14 @@
             <a class="nav-link font-weight-bold text-uppercase active" href="{{route('notifications.following')}}">Following</a>
           </li>
           <li class="nav-item flex-fill">
-            <a class="nav-link font-weight-bold text-uppercase" href="{{route('notifications')}}">My Notifications</a>
+            <a class="nav-link font-weight-bold text-uppercase" href="{{route('notifications')}}">Мои уведомления</a>
           </li>
         </ul>
       </div>
     </div>
     <div class="">
 {{--       <div class="card-header bg-white">
-        <span class="font-weight-bold lead">Notifications</span>
+        <span class="font-weight-bold lead">Уведомления</span>
         <span class="small float-right font-weight-bold">
           <a href="?a=comment" class="pr-4 text-muted" title="Commented on your post"><i class="fas fa-comment fa-2x"></i></a>
           <a href="?a=follow" class="pr-4 text-muted" title="Followed you"><i class="fas fa-user-plus fa-2x"></i></a>

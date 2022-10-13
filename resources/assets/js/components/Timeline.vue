@@ -140,9 +140,9 @@
 												</p>
 											</div>
 											<div v-else>
-												<p class="text-center h3 font-weight-light">You've reached the end of this feed</p>
+												<p class="text-center h3 font-weight-light">Это конец ленты!</p>
 												<p class="text-center mb-0">
-													<a class="btn btn-link font-weight-bold px-4" href="/discover">Discover new posts and people</a>
+													<a class="btn btn-link font-weight-bold px-4" href="/discover">Откройте для себя новые посты и людей</a>
 												</p>
 											</div>
 										</div>
@@ -159,9 +159,9 @@
 												</p>
 											</div>
 											<div v-else>
-												<p class="text-center h3 font-weight-light">You've reached the end of this feed</p>
+												<p class="text-center h3 font-weight-light">Это конец ленты!</p>
 												<p class="text-center mb-0">
-													<a class="btn btn-link font-weight-bold px-4" href="/discover">Открывайте новые посты и людей</a>
+													<a class="btn btn-link font-weight-bold px-4" href="/discover">Откройте для себя новые посты и людей</a>
 												</p>
 											</div>
 										</div>
@@ -389,10 +389,10 @@
 							</span>
 						</div>
 						<div class="d-flex align-items-center">
-							<div class="custom-control custom-switch mr-3">
+							<!-- <div class="custom-control custom-switch mr-3">
 								<input type="checkbox" class="custom-control-input" id="replyModalCWSwitch" v-model="replyNsfw">
 								<label :class="[replyNsfw ? 'custom-control-label font-weight-bold text-dark':'custom-control-label text-lighter']" for="replyModalCWSwitch">Mark as NSFW</label>
-							</div>
+							</div> -->
 
 							<button class="btn btn-primary btn-sm py-2 px-4 lead text-uppercase font-weight-bold" v-on:click.prevent="commentSubmit(status, $event)" :disabled="replyText.length == 0">
 								{{replySending == true ? 'POSTING' : 'POST'}}

@@ -56,7 +56,7 @@
 								<a class="list-group-item text-dark text-decoration-none" :href="statusUrl(status)">Go to post</a>
 								<!-- a class="list-group-item font-weight-bold text-decoration-none" :href="status.url">Share</a>
 								<a class="list-group-item font-weight-bold text-decoration-none" :href="status.url">Embed</a> -->
-								<a class="list-group-item text-dark text-decoration-none" href="#" @click.prevent="hidePost(status)">Hide</a>
+								<!-- <a class="list-group-item text-dark text-decoration-none" href="#" @click.prevent="hidePost(status)">Hide</a> -->
 								<a v-if="activeSession == true && !statusOwner(status)" class="list-group-item text-danger font-weight-bold text-decoration-none" :href="reportUrl(status)">Report</a>
 								<div v-if="activeSession == true && statusOwner(status) == true || profile.is_admin == true" class="list-group-item text-danger font-weight-bold cursor-pointer" @click.prevent="deletePost">Delete</div>
 								<a class="list-group-item text-lighter text-decoration-none" href="#" @click.prevent="closeModal()">Close</a>
