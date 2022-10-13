@@ -199,7 +199,7 @@
 						type="button"
 						class="btn btn-primary btn-sm py-1 font-weight-bold px-3 float-right"
 						@click.prevent="updateCollection">
-						Save
+						Сохранить
 					</button>
 				</div>
 
@@ -215,7 +215,7 @@
 						type="button"
 						class="btn btn-primary btn-sm py-1 font-weight-bold px-3"
 						@click.prevent="updateCollection">
-						Save
+						Сохранить
 					</button>
 				</div>
 			</div>
@@ -239,7 +239,7 @@
 		<form>
 			<div class="form-group">
 				<label for="title" class="font-weight-bold text-muted">Add Post by URL</label>
-				<input type="text" class="form-control" placeholder="https://pixelfed.dev/p/admin/1" v-model="photoId">
+				<input type="text" class="form-control" placeholder="https://www.example.ru" v-model="photoId">
 				<p class="help-text small text-muted">Only local, public posts can be added</p>
 			</div>
 			<button type="button" class="btn btn-primary btn-sm py-1 font-weight-bold px-3 float-right" @click.prevent="pushId">
