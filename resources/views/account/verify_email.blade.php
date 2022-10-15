@@ -15,7 +15,7 @@
     @endif
 
     @if(Auth::user()->email_verified_at)
-    	<p class="lead text-center mt-5">ВАша почта подтверждена. <a href="/" class="font-weight-bold">Нажмите здесь</a> что-бы вернутся.</p>
+    	<p class="lead text-center mt-5">Ваша почта подтверждена. <a href="/" class="font-weight-bold">Нажмите здесь</a> что-бы вернутся.</p>
     @else
     <div class="card shadow-none border">
       <div class="card-header font-weight-bold bg-white">Подтвердить почту</div>

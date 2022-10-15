@@ -138,7 +138,7 @@
 			</p>
 			<div class="list-group text-center">
 				<div class="list-group-item rounded cursor-pointer font-weight-bold" @click="sendReport('spam')">Спам</div>
-				<div class="list-group-item rounded cursor-pointer font-weight-bold" @click="sendReport('sensitive')">Sensitive Content</div>
+				<!-- D -->
 				<div class="list-group-item rounded cursor-pointer font-weight-bold" @click="sendReport('abusive')">Abusive or Harmful</div>
 				<div class="list-group-item rounded cursor-pointer font-weight-bold" @click="openCtxReportOtherMenu()">Другое</div>
 				<!-- <div class="list-group-item rounded cursor-pointer" @click="ctxReportMenuGoBack()">Go Back</div> -->

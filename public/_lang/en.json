@@ -1,9 +1,9 @@
 {
     "common": {
-        "comment": "Comment",
+        "comment": "Комментарий",
         "commented": "Commented",
         "comments": "Comments",
-        "like": "Like",
+        "like": "Лайк",
         "liked": "Liked",
         "likes": "Likes",
         "share": "Поделится",
@@ -29,8 +29,8 @@
         "sensitiveContentWarning": "This post may contain sensitive content"
     },
     "site": {
-        "terms": "Terms of Use",
-        "privacy": "Privacy Policy"
+        "terms": "Условия использования",
+        "privacy": "Политика конфидециальное"
     },
     "navmenu": {
         "search": "Поиск",
