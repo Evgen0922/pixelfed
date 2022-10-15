@@ -144,7 +144,7 @@
 										:hash="s.media_attachments[0].blurhash"
 										:src="previewUrl(s)" />
 								</div>
-							</div>
+							</div> 
 						</a>
 				</div>
 
