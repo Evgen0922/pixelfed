@@ -185,7 +185,7 @@
 								</div>
 								<div v-else class="card-body py-5 my-5">
 									<p class="text-center"><i class="far fa-smile fa-8x text-lighter"></i></p>
-									<p class="text-center h3 font-weight-light">Hello {{profile.username}}</p>
+									<p class="text-center h3 font-weight-light">Здравствуйте, {{profile.username}}</p>
 									<p class="text-center text-muted font-weight-light">Accounts you follow will appear in this feed.</p>
 									<p class="text-center mb-0">
 										<a class="btn btn-link font-weight-bold px-4" href="/discover">Открывайте новые посты и людей</a>
